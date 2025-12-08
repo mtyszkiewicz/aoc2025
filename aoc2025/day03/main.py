@@ -1,5 +1,3 @@
-from pathlib import Path
-
 
 def max_joltage(bank: str, k: int) -> str:
     """
@@ -38,9 +36,7 @@ def max_joltage(bank: str, k: int) -> str:
     return None
 
 
-def main(input_path: Path):
-    input_text = input_path.read_text()
-
+def main(input_text: str):
     result_p1 = 0
     result_p2 = 0
     for bank in input_text.splitlines():

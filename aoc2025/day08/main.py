@@ -1,8 +1,7 @@
 import operator
-from pathlib import Path
-from math import dist
-from itertools import combinations
 from functools import reduce
+from itertools import combinations
+from math import dist
 
 import networkx as nx
 
@@ -16,8 +15,7 @@ def parse_input(input_text: str) -> list[Point]:
     ]
 
 
-def main(input_path: Path):
-    input_text = input_path.read_text()
+def main(input_text: str):
     points = parse_input(input_text)
 
     is_example = len(points) == 20

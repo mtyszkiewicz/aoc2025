@@ -1,5 +1,4 @@
 from dataclasses import dataclass
-from pathlib import Path
 
 
 class DisjointRangeError(Exception): ...
@@ -88,8 +87,7 @@ def parse_input(input_text: str) -> IngredientDatabase:
     return IngredientDatabase(fresh_ranges, inventory)
 
 
-def main(input_path: Path):
-    input_text = input_path.read_text()
+def main(input_text: str):
     db = parse_input(input_text)
     db.optimize_ranges()
 

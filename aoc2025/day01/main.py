@@ -1,5 +1,4 @@
 from dataclasses import dataclass
-from pathlib import Path
 from typing import Literal
 
 from typing_extensions import Self
@@ -37,8 +36,7 @@ class SafeDial:
                 self.click_count += 1
 
 
-def main(input_path: Path):
-    input_text = input_path.read_text()
+def main(input_text: str):
     dial = SafeDial()
 
     zero_stops = 0

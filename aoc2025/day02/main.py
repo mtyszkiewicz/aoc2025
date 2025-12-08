@@ -1,4 +1,3 @@
-from pathlib import Path
 from typing import Generator
 
 
@@ -30,8 +29,8 @@ def parse_input(input_text: str) -> Generator[int, None, None]:
             yield number
 
 
-def main(input_path: Path):
-    input_text = input_path.read_text().replace("\n", "")
+def main(input_text: str):
+    input_text = input_text.replace("\n", "")
 
     p1_result = 0
     p2_result = 0

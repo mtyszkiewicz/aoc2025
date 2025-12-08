@@ -1,4 +1,3 @@
-from pathlib import Path
 from typing import Generator, Literal
 
 Value = Literal[".", "@", "x"]
@@ -35,9 +34,7 @@ def find_papers_to_remove(grid: Grid) -> list[Point]:
     return to_remove
 
 
-def main(input_path: Path):
-    input_text = input_path.read_text()
-
+def main(input_text: str):
     grid = parse_input(input_text)
 
     total_removed = 0

@@ -1,10 +1,7 @@
 from collections import defaultdict
-from pathlib import Path
 
 
-def main(input_path: Path):
-    input_text = input_path.read_text()
-
+def main(input_text: str):
     total_splits = 0
     beams = defaultdict(int)
     for y, line in enumerate(input_text.splitlines()):

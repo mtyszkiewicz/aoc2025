@@ -4,7 +4,6 @@ from collections import defaultdict
 from dataclasses import dataclass
 from functools import reduce
 from itertools import pairwise
-from pathlib import Path
 
 
 @dataclass
@@ -76,8 +75,7 @@ def evaluate_part_2(operations: list[Operation], values: list[list[str]]):
     return grand_total
 
 
-def main(input_path: Path):
-    input_text = input_path.read_text()
+def main(input_text: str):
     lines = input_text.splitlines()
     ops = parse_operations(lines[-1])
     values = parse_values(lines[:-1], ops)

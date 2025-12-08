@@ -79,7 +79,7 @@ def main():
             sys.exit(1)
 
     with get_input_path(args, day_num) as input_path:
-        day_module.main(input_path)
+        day_module.main(input_path.read_text())
 
 
 if __name__ == "__main__":
